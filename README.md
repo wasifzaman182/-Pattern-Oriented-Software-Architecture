@@ -19,25 +19,25 @@ This repo will cover patterns and usage of patterns in software architectures
       4) Deferring which algorithm to use until runtime makes the calling code more flexible and reusable.
       
 #### Strategy and open/closed principle
-    1) The behaviors of a class should not be inherited.
+    1) The behaviours of a class should not be inherited.
     2) Instead they should be encapsulated using interfaces.
     3) This is compatible with the open/closed principle (OCP), which proposes that classes should be open for extension but closed for modification.
 ## Question 1, What happens when a system has an explosion of Strategy objects? Is there some way to better manage these strategies?
- #### 1 Use a Hierarchy:
-          Organize related strategies into a hierarchy. This can help reduce the number of distinct classes and create a more structured organization. Common behaviors can be placed in higher-level strategy classes, while specific 
+ ##### 1 Use a Hierarchy:
+          Organize related strategies into a hierarchy. This can help reduce the number of distinct classes and create a more structured organization. Common behaviours can be placed in higher-level strategy classes, while specific 
            variations can be implemented in subclasses.
 
 ##### 2 Group Strategies with Composite Pattern:
-          Apply the Composite Pattern to group related strategies. This allows you to treat individual strategies and composite groups of strategies uniformly. Clients can work with both individual strategies and compositions of                    strategies.
+          Apply the Composite Pattern to group-related strategies. This allows you to treat individual strategies and composite groups of strategies uniformly. Clients can work with both individual strategies and compositions of                    strategies.
 
 ##### 3 Parameterize Strategies:
-     Consider parameterizing strategies to make them more flexible. Instead of creating a new class for each variation, you can have a single strategy class with parameters that determine its behavior. This can reduce the number of 
+     Consider parameterizing strategies to make them more flexible. Instead of creating a new class for each variation, you can have a single strategy class with parameters that determine its behaviour. This can reduce the number of 
      distinct classes.
 
 ##### 4 Use Reflection or Configuration:
      Use reflection or configuration files to dynamically load and instantiate strategy classes. This allows you to add new strategies without modifying the code. However, be cautious with this approach, as it might sacrifice type safety.
 
-#### 5 Apply Design Patterns:
+##### 5 Apply Design Patterns:
      Explore other design patterns that may help manage a large number of classes. For example, the Factory Method pattern can be used to encapsulate the instantiation of strategy objects. The Abstract Factory pattern can provide 
     an interface for creating families of related or dependent strategies.
 
@@ -59,7 +59,7 @@ This repo will cover patterns and usage of patterns in software architectures
 ## Question 2 In the implementation section of the strategy pattern in [GHJV95], the authors describe two ways in which a strategy can get the information it needs to do its job. One way the strategy object could get passed a reference to the context object, thereby giving it access to context data. But is it possible that the data required by the strategy will not be available from the context’s interface? How could you remedy this potential problem?
 
      In the Strategy Pattern, the strategy objects can obtain the information they need to perform their tasks in two main ways: either by having a reference to the context object or by obtaining the required data through the context's interface. However, there might be cases where the data required by the strategy is not available from the context's interface. Here are some approaches to remedy this potential problem
-#### 1 Enhance Context Interface:
+##### 1 Enhance Context Interface:
      If the required data is not available in the existing context interface, consider enhancing the interface to include methods that expose the necessary data. This approach allows strategies to obtain the required information directly from the context.
 
 ##### 2 Additional Parameters in Strategy Methods:
