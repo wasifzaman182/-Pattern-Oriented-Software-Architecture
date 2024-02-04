@@ -83,3 +83,11 @@ This repo will cover patterns and usage of patterns in software architectures
 ##### 8 Context Transformation:
      Transform the context data into a format that is suitable for the strategy. This can involve creating an adapter or a wrapper around the context to present the required information in a way that is accessible to the strategy.
      
+# Template Pattern 
+  ##### Definition 
+     1) Define the skeleton of an algorithm in an operation, deferring some steps to client subclasses.
+     2) Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+  ##### Problem 
+  [The problem before the Template Pattern.docx](https://github.com/wasifzaman182/-Pattern-Oriented-Software-Architecture/files/14156827/The.problem.before.the.Template.Pattern.docx)
+
+    
