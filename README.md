@@ -278,3 +278,33 @@ iterator pattern
 Composit pattern
 =====================================================
 HOw to combine scurm with safety standards
+=============================================================
+
+# The Big Ball of Mud
+          
+          Big Ball of Mud is a phrase that, when heard in software engineering circles, is bound to send shivers down any developer’s spine. This term doesn’t represent a badge of honor. Quite the contrary, it refers to a software antipattern, a kind of cautionary tale that tells us what we should strive to avoid in our coding endeavors. In this blog, we will untangle the Big Ball of Mud antipattern, unpack its pitfalls, and illustrate the concepts using examples in C#.
+
+     What is a “Big Ball of Mud”?
+     A Big Ball of Mud (BBOM) is a term that encapsulates the essence of a system that lacks any perceivable architecture. Picture a codebase where everything is intermingled, where there is no clear separation of concerns, no modularity, and every component depends heavily on every other.
+     
+     A BBOM system grows “organically” with features tacked on haphazardly rather than being integrated thoughtfully. The result is a codebase that is, frankly, a nightmare to comprehend, maintain, or extend.
+     
+     If we borrow the metaphor behind the name, a Big Ball of Mud system is essentially a massive, shapeless blob of code where everything is jumbled up with no apparent order or structure.
+# What Causes a “Big Ball of Mud”?
+     Several factors can contribute to a system devolving into a BBOM:
+     
+     Lack of design: Often, a BBOM originates because no initial architecture was planned, or the original plan was not followed diligently during development.
+     Rapid development: When the drive to deliver features hastily takes precedence, it’s easy to take shortcuts that bypass good design principles.
+     Lack of refactoring: As code piles up, it’s crucial to regularly refactor and tidy it. Without this, the code can morph into a tangled mess.
+     Insufficient understanding of OO principles: Developers with a weak grasp of object-oriented (OO) principles, such as encapsulation, inheritance, and polymorphism, may misuse or neglect these essential tools, resulting in poorly structured code.
+
+# The Opposite of Big Ball of Mud
+     Now, you might be wondering, “What’s the opposite of the Big Ball of Mud? The answer lies in a set of design principles known as SOLID.
+     
+     SOLID is an acronym that stands for five important design principles in object-oriented programming:
+     
+     Single Responsibility Principle (SRP): Each class should have a single responsibility or job.
+     Open-Closed Principle (OCP): Software entities should be open for extension but closed for modification.
+     Liskov Substitution Principle (LSP): Subtypes must be substitutable for their base types without causing issues.
+     Interface Segregation Principle (ISP): It’s better to have many small, specialized interfaces rather than one large, general-purpose one.
+     Dependency Inversion Principle (DIP): Depend on abstractions, not on concrete implementations.
